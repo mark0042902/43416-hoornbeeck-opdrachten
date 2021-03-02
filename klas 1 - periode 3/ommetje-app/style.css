@@ -1,0 +1,124 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(achtergrond.jpg);
+    background-repeat: no-repeat;   
+    background-size: cover;
+    font-family: 'mont', 'sans-serif';
+}
+
+#top-header {
+    height: 75px;
+    background-color: transparent;
+}
+
+#top-header .name{
+    float: left;
+    font-family: 'mont', 'sans-serif';
+    font-size: 50px;
+    padding: 10px 20px 10px 20px;
+}
+
+#top-header .xp{
+    float: right;
+    font-family: 'mont', 'sans-serif';
+    font-size: 50px;
+    padding: 10px 20px 10px 20px;
+}
+
+.xpgetal {
+    color: purple; 
+    font-weight: bold;
+}
+
+#header .minuten {
+    margin-left: 50px;
+    margin-top: 350px; 
+    font-size: 50px;  
+}
+
+.mingetal {
+    color: purple;
+    font-weight: bold;
+    font-size: 75px;
+}
+
+.txtmin {
+    font-size: 25px;
+}
+
+.button {
+    background-color: purple;
+    color: white;
+    padding: 30px 175px;
+    display: inline-block;
+    font-size: 25px;
+    justify-content: center;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-left: 250px;
+}
+
+#Teams {
+    border-style: solid;
+    color: lightgray;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 15px;
+}
+
+#top_teams .title {
+    color: purple;
+    font-size: 50px;
+    margin-left: 10px;
+}   
+
+#top_teams .xp_uitleg {
+    float: right;
+    margin-right: 20px;
+    margin-top: -40px;
+    font-size: 30px;
+    color: grey;
+
+}
+
+#Teams .klas_team {
+    font-family: 'mont', 'sans-serif';
+    font-weight: bold;
+    font-size: 40px;
+    margin-left: 10px;
+    margin-top: -10px;
+    color: darkslategray;
+}
+
+#xpklas {
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+}
+
+
+
+#xpklas .xpgetal_klas {
+    color: purple;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#xpklas .xp_klas {
+    color: grey;
+    font-size: 30px;
+}
+
+#Teams .ranglijst_klas {
+    color: purple;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+#Teams .Team_beheer {
+    color: grey;
+    margin-left: 275px;
+    font-size: 30px;
+}
