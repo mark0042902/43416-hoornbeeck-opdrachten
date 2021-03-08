@@ -86,7 +86,7 @@ body {
 
 #top_teams .xp_uitleg {
     float: right;
-    margin-right: 20px;
+    margin-right: 5px;
     margin-top: -40px;
     font-size: 30px;
     color: grey;
@@ -96,7 +96,7 @@ body {
 #Teams .klas_team {
     font-family: 'mont', 'sans-serif';
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 10px;
     margin-top: -10px;
     color: darkslategray;
@@ -288,4 +288,136 @@ body {
     font-size: 25px;
     color: darkslategray;
     
+}
+
+#Medals .infomedals {
+    margin-left: 25%;
+    font-size: 25px;
+    color: darkslategray;
+}
+
+#doneren {
+    border-style: solid;
+    color: lightgray;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 15px;
+    height: 425px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#doneren .titled {
+    color: purple;
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+#doneren .tekstd {
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: 40px;
+    color: darkslategray;
+}
+
+#doneren .buttonD {
+    background-color: orange;
+    color: white;
+    padding: 30px 125px;
+    display: inline-block;
+    font-size: 25px;
+    justify-content: right;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-left: 120px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#stats {
+    border-style: solid;
+    color: lightgray;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 15px;
+    height: 325px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#stats .titleSO {
+    color: purple;
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+#stats .buttonS {
+    background-color: purple;
+    color: white;
+    padding: 30px 100px;
+    display: inline-block;
+    font-size: 25px;
+    justify-content: center;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-left: 125px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#stats .buttonO {
+    background-color: orange;
+    color: white;
+    padding: 30px 100px;
+    display: inline-block;
+    font-size: 25px;
+    justify-content: right;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-left: 125px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#end {
+    background-image: url(Background_beneden.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+
+#end .END {
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 40px;
+    color: white;
+}
+
+#end .ENDS {
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 25px;
+    color: white;
+}
+
+#end .ENDapp {
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 15px;
+    color: white;
+}
+
+.vraag {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    float: right;
+    font-size: 40px;
+    color: purple;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 50%;
+    border-color: purple;
+    position: sticky;
+    bottom: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
