@@ -1,0 +1,12 @@
+@media screen and (min-width: 0px) and (max-width: 640px){
+    .mobile {color: red;}
+}
+@media screen and (min-width: 641px) and (max-width: 880px){
+    .mobile {color: yellow;}
+}
+@media screen and (min-width: 881px) and (max-width: 1200px){
+    .mobile {color: orange;}
+}
+@media screen and (min-width: 1201px) and (max-width: 1500px){
+    .mobile {color: brown;}
+}

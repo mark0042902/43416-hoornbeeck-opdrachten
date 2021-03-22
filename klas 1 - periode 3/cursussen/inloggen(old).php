@@ -9,26 +9,38 @@ include "header.inc.php";
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="Index.php">Home</a></li>
+            <?php
+            if (isset($_SESSION['login'])){
+                echo '<li><a href="uitloggen.php">Uitloggen</a></li>';
+            } else {
+                echo '<li><a href="Inloggen.php">Inloggen</a></li>';
+            }
+            ?>
+        </ul>
+    </nav>
 
     <form action="" method="POST">
-        <input type="text" placeholder="gebruikersnaam" name="username">
-        <input type="password" placeholder="wachtwoord" name="password">
-        <input type="submit" name="submit" value="inloggen">1
+        <input type="text" placeholder="gebruikersnaam" name="username"><br><br>
+        <input type="password" placeholder="wachtwoord" name="password"><br><br>
+        <input type="submit" name="submit" value="inloggen">
     </form>
 
 
     <?php
 
 
-    $naam = strtolower($_POST['username']);
-    $wachtwoord = $_POST['password'];
+    $naam = (isset($_POST["username"])) ? $_POST["username"] : "" ;
+    $wachtwoord = (isset($_POST["password"])) ? $_POST["password"] : "" ;
 
     $gebruikers = array(
         'admin' => 'gert',
         'gebruikersnaam2' => 'wachtwoord2', 
     );
 
-    if(isset($gebruikers[$naam]))
+    if($_POST && !isset($gebruikers[$naam]))
         {
             if($wachtwoord == $gebruikers[$naam])
                 {

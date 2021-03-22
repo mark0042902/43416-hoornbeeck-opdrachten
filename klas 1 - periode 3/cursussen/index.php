@@ -16,9 +16,9 @@ include "header.inc.php";
             <li><a href="Index.php">Home</a></li>
             <?php
             if (isset($_SESSION['login'])){
-                echo '<li><a href="uitloggen.php">Uitloggen</a></li>';
+                echo '<li><a href="logout.php">Uitloggen</a></li>';
             } else {
-                echo '<li><a href="Inloggen.php">Inloggen</a></li>';
+                echo '<li><a href="login.php">Inloggen</a></li>';
             }
             ?>
         </ul>

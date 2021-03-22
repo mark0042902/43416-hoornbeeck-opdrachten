@@ -86,17 +86,17 @@ body {
 
 #top_teams .xp_uitleg {
     float: right;
-    margin-right: 5px;
-    margin-top: -40px;
+    margin-right: -5px;
+    margin-top: -50px;
     font-size: 30px;
     color: grey;
-
+    width: 150px;
 }
 
 #Teams .klas_team {
     font-family: 'mont', 'sans-serif';
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 10px;
     margin-top: -10px;
     color: darkslategray;
@@ -108,22 +108,20 @@ body {
     float: right;
 }
 
-
-
 #xpklas .xpgetal_klas {
     color: purple;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 #xpklas .xp_klas {
     color: grey;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 #Teams .ranglijst_klas {
     color: purple;
-    font-size: 30px;
+    font-size: 15px;
     margin-left: 10px;
 }
 
@@ -134,8 +132,8 @@ body {
 
 #Teams .Team_beheer {
     color: grey;
-    margin-left: 275px;
-    font-size: 30px;
+    margin-left: 225px;
+    font-size: 20px;
 }
 
 #Medals {
@@ -145,7 +143,7 @@ body {
     margin-left: 150px;
     margin-right: 150px;
     border-radius: 15px;
-    height: 1200px;
+    height: 1250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -161,8 +159,57 @@ body {
     width: 400px;
 }
 
-#Medals .afbH {
-    margin-left: 50px;
+.circle-wrap {
+    width: 200px;
+    height: 200px;
+    background: #e6e2e7;
+    border-radius: 50%;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 200px, 200px, 100px);
+}
+
+.circle-wrap .circle .mask .fill {
+    clip: rect(0px, 100px, 200px, 0px);
+    background-color: #32CD32;
+}
+.circle-wrap .circle .mask.full,
+.circle-wrap .circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(90deg);
+}
+   
+@keyframes fill {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+}
+
+.circle-wrap .inside-circle {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background: #fff;
+    line-height: 130px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 13px;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
 }
 
 #Medals .T_H {
@@ -203,11 +250,6 @@ body {
     height: 400px;
     width: 400px;
     margin-top: -100px;
-}
-
-#Medals .afbHa {
-    margin-left: 50px;
-    margin-top: 50px;
 }
 
 #Medals .T_HA {
@@ -326,7 +368,7 @@ body {
     padding: 30px 125px;
     display: inline-block;
     font-size: 25px;
-    justify-content: right;
+    text-decoration: none;
     border-radius: 50px;
     margin-top: 25px;
     margin-left: 120px;
@@ -409,6 +451,8 @@ body {
     width: 50px;
     height: 50px;
     float: right;
+    right: 0px;
+    margin-right: 10px;
     font-size: 40px;
     color: purple;
     background-color: whitesmoke;
@@ -416,7 +460,7 @@ body {
     border-width: 5px;
     border-radius: 50%;
     border-color: purple;
-    position: sticky;
+    position: fixed;
     bottom: 10px;
     font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

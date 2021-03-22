@@ -8,18 +8,30 @@
 <body>
 
     <h1>Overzicht gebruikers</h1>   
-
+    <h2>Gebruiker</h2>
     <?php
-        $conn = mysqli_connect('localhost','root','','test');
-        $sql = "SELECT * FROM users";
-        $result = mysqli_query($conn, $sql);
+    $conn = mysqli_connect('localhost','root','','test');
 
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo $row['id']." ";
-            echo $row['username']." ";
-            echo $row['password']." ";
-            echo $row['naam_voluit']."<br \>";
-        }
+    if ($_POST) {
+
+        $sql = "INSERT INTO users SET
+            username = '".$_POST['username']."',
+            password = '".$_POST['password']."'";
+        mysqli_query($conn,$sql);
+    }
+    echo "<p></p>";
+
+    $sql = "SELECT * FROM users";
+    $result = mysqli_query($conn,$sql);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo $row['id']." | ";
+        echo $row['username']." | ";
+        echo $row['password']." | ";
+        echo $row['naam_voluit']." | <a href= 'user_edit.php?id=".$row['id']."'>Bewerken</a><br>";
+
+    }
     ?>
+
 </body>
 </html>
