@@ -1,5 +1,5 @@
 @media screen and (min-width: 0px) and (max-width: 640px){
-    .mobile {color: red;}
+    .mobile {border: black; background-color: black;}
 }
 @media screen and (min-width: 641px) and (max-width: 880px){
     .mobile {color: yellow;}

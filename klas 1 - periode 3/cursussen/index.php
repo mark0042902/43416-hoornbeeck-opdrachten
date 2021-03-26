@@ -12,13 +12,13 @@ include "header.inc.php";
     <h2>Cursussen</h2>
 
     <nav>
-        <ul>
-            <li><a href="Index.php">Home</a></li>
+        <ul style="list-style-type: none; display: inline-block;">
+            <li><a href="Index.php"><button>Home</button></a></li>
             <?php
             if (isset($_SESSION['login'])){
-                echo '<li><a href="logout.php">Uitloggen</a></li>';
+                echo '<li><a href="logout.php"><button>Uitloggen</button></a></li>';
             } else {
-                echo '<li><a href="login.php">Inloggen</a></li>';
+                echo '<li><a href="login.php"><button>Inloggen</button></a></li>'; 
             }
             ?>
         </ul>
@@ -65,18 +65,21 @@ include "header.inc.php";
 
 
 
-if (isset($_SESSION['login'])) { 
+ 
     foreach ($items as $item) {
         echo "
         <tr>
             <td>".$item['cursus']."</td>
             <td>".$item['omschrijving']."</td>
             <td>".$item['prijs']."</td>
-            <td><a href='?course=".$item['cursus']."'>inschrijven</a></td>
-        </tr>";
+            ";
+            if (isset($_SESSION['login'])) {
+            echo "<td><a href='?course=".$item['cursus']."'><button>Inschrijven</button></a></td>";
+            }
+        echo "</tr>";
     }
 
-}
+
 
 
 
@@ -84,7 +87,7 @@ echo "</table>
 </form>";
 
 if(isset($_GET['course'])) {
-    echo "ingeschreven voor ".$_GET['course']."";
+    echo "U heeft zich ingeschreven voor ".$_GET['course']."";
 }
 
 ?>
