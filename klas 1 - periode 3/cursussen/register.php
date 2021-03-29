@@ -1,14 +1,4 @@
-<?php
-// Include config file
-include "config.php";
-if ($_POST) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
-
-    $result   = mysqli_query($link, "INSERT INTO users(username,password) VALUES('$username','$password')");
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,14 +47,23 @@ if ($_POST) {
         </form>
     </div>
 </body>
+
 <?php
+// Include config file
+include "config.php";
+if ($_POST) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-if ($result) {
-    echo "<br/><br/>&nbsp&nbsp&nbsp&nbspUser succesvol aangemaakt.";
-} else {
-    echo "Er is wat fout gegaan. Probeer het opnieuw." . mysqli_error($link);
+
+    $result   = mysqli_query($link, "INSERT INTO users(username,password) VALUES('$username','$password')");
+
+    if (isset($result)) {
+        echo "<br/><br/>&nbsp&nbsp&nbsp&nbsp&nbspUser succesvol aangemaakt.";
+    } else {
+        echo "&nbsp&nbsp&nbsp&nbsp&nbspEr is wat fout gegaan. Probeer het opnieuw." . mysqli_error($link);
+    }
 }
-
 ?>
 
 </html>

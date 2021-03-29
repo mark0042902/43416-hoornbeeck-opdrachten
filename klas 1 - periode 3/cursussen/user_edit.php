@@ -27,7 +27,7 @@ if ($_POST) {
         WHERE id = ".$_POST['id'];
     mysqli_query($conn,$sql);
 
-    header('location: user_overzicht.php');
+    header('location: users.php');
 }
 
 
@@ -43,7 +43,7 @@ echo "<p></p>";
 <input type="hidden" name="id" value="<?php echo $row['id'];?>">
 <div>Gebruikersnaam</div><input type="text" name="username" value="<?php echo $row['username'];?>"><br>
 <div>Wachtwoord</div><input type="text" name="password" value="<?php echo $row['password'];?>"><br>
-<div>Naam</div><input type="text" name="naam_voluit" value="<?php echo $row['naam_voluit'];?>"><br>
+<input type="hidden" name="naam_voluit" value="<?php echo $row['naam_voluit'];?>"><br>
 <input type="submit" name="submit" value="opslaan"><br>
 </form>
 

@@ -79,6 +79,7 @@ if ($_POST) {
             </div>
             <?= isset($error) ? $error : '' ?>
             <p>Heeft u geen account? <a href="register.php">Maak er hier een</a>.</p>
+            <p>Wilt u accounts bewerken? <a href="users.php">Bewerk ze hier</a>.</p>
         </form>
     </div>
 </body>

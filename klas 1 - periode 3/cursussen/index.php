@@ -6,88 +6,86 @@ include "header.inc.php";
     <meta http-equiv="Content Type" content="text/html; charset=utf-8" />
     <title>Cursussen</title>
 </head>
-
+<header id="header"> <link rel="STYLESHEET" href="style.css" type="text/css">
+	<nav class="links" style="--items: 5;">
+		<a href="#">Home</a>
+		<a href="#">Login</a>
+		<a href="#">Register</a>
+		<?php
+            if (isset($_SESSION['login'])) {
+                echo '<a href="logout.php">Uitloggen</a>';
+            } else {
+                echo '<a href="login.php">Inloggen</a>';
+            }?>
+		<span class="line"></span>
+	</nav>
+</header>
 <body>
 
     <h2>Cursussen</h2>
+<br>
+<br>
+<br>
+<br>
 
-    <nav>
-        <ul style="list-style-type: none; display: inline-block;">
-            <li><a href="Index.php"><button>Home</button></a></li>
-            <?php
-            if (isset($_SESSION['login'])){
-                echo '<li><a href="logout.php"><button>Uitloggen</button></a></li>';
-            } else {
-                echo '<li><a href="login.php"><button>Inloggen</button></a></li>'; 
+
+
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <td>Cursus</td>
+            <td>Omschrijving</td>
+            <td>Prijs</td>
+            <?php if (isset($_SESSION['login'])) {
+                echo "
+                <td>Inschrijven</td>
+                <td>Bewerken</td>
+                <td>Verwijderen</td>
+            </tr>";
             }
             ?>
-        </ul>
-    </nav>
+        </tr>
 
-        <table border="1" cellspacing="0" cellpadding="5">
+        <?php
+
+        $conn = mysqli_connect('localhost', 'root', '', 'test');
+
+        if ($_POST) {
+
+            $sql = "INSERT INTO cursussen SET
+                cursus = '" . $_POST['cursus'] . "',
+                omschrijving = '" . $_POST['omschrijving'] . "'
+                prijs = '" . $_POST['prijs'] . "'";
+            mysqli_query($conn, $sql);
+        }
+
+        $sql = "SELECT * FROM cursussen";
+        $result = mysqli_query($conn, $sql);
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "
             <tr>
-                <td>Cursus</td>
-                <td>Omschrijving</td>
-                <td>Prijs</td>
-                <td>&nbsp;</td>
-            </tr>
-
-            <?php
-
-            $items = array(
-                array(
-                    "cursus" => "Dreamweaver",
-                    "omschrijving" => "Basis webdesign",
-                    "prijs" => 120.00
-                ),
-                array(
-                    "cursus" => "Javascript",
-                    "omschrijving" => "Programmeren in de browser",
-                    "prijs" => 90.00
-                ),
-                array(
-                    "cursus" => "PHP",
-                    "omschrijving" => "Programmeren op de server",
-                    "prijs" => 150.00
-                ),
-                array(
-                    "cursus" => "Dreamweaver Eindwerk",
-                    "omschrijving" => "Webdesign in de praktijk",
-                    "prijs" => 180.00
-                ),
-                array(
-                    "cursus" => "Dreamweaver-3",
-                    "omschrijving" => "Webdesign thuis",
-                    "prijs" => 280.00
-                )
-
-            );
-
-
-
- 
-    foreach ($items as $item) {
-        echo "
-        <tr>
-            <td>".$item['cursus']."</td>
-            <td>".$item['omschrijving']."</td>
-            <td>".$item['prijs']."</td>
-            ";
+                <td>".$row['cursus']."</td>
+                <td>".$row['omschrijving']."</td>
+                <td>€ ".$row['prijs']."</td>
+                ";           
             if (isset($_SESSION['login'])) {
-            echo "<td><a href='?course=".$item['cursus']."'><button>Inschrijven</button></a></td>";
+                echo "
+                <td><a href='?course=" . $row['cursus'] . "'><button>Inschrijven</button></a></td>
+                <td><a href= 'cursus_edit.php?id=" . $row['id'] . "'>Bewerken</a></td>
+                <td><a href= 'cursus_delete.php?id=" . $row['id'] . "'>Verwijderen</a><br>"."</td>
+            </tr>";
             }
-        echo "</tr>";
-    }
+            echo "</tr>";
+        }
 
+    echo "</table>
+        </form>";
 
+        if (isset($_GET['course'])) {
+            echo "Beste " . $_SESSION["username"] . " u heeft zich ingeschreven voor " . $_GET['course'] . "";
+        }
 
-
-
-echo "</table>
-</form>";
-
-if(isset($_GET['course'])) {
-    echo "U heeft zich ingeschreven voor ".$_GET['course']."";
-}
-
-?>
+    ?>
+    </body>
+</html>

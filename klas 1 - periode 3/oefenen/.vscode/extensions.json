@@ -1,6 +1,5 @@
 {
     "recommendations": [
-        "ritwickdey.liveserver",
         "jeffreymanzione.jeff-vm-language-server"
     ]
 }
