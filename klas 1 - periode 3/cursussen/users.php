@@ -5,17 +5,27 @@
     <title>Overzicht users</title>
 
 </head>
-
-<body>
-
-    <h1>Overzicht gebruikers</h1>
-    <h2>Gebruiker</h2>
-    <nav>
-        <ul style="list-style-type: none; display: inline-block;">
-            <li><a href="Index.php"><button>Home</button></a></li>
-        </ul>
+<header id="header">
+    <link rel="STYLESHEET" href="style.css" type="text/css">
+    <nav class="links" style="--items: 3;">
+        <a href="index.php">Home</a>
+        <?php
+        if (isset($_SESSION['login'])) {
+            echo '<a href="logout.php">Uitloggen</a>';
+        } else {
+            echo '<a href="login.php">Inloggen</a>';
+        } ?>
+        <a href="register.php">Register</a>
+        <span class="line"></span>
     </nav>
-    <table border="1" cellspacing="0" cellpadding="5">
+</header>
+
+
+<body style="margin-top: 100px; margin-left: 550px;">
+
+    <h1 style="margin-left: 75px;">Overzicht gebruikers</h1>
+    <h2 style="margin-left: 125px;">Gebruikers:</h2>
+    <table border="1" cellspacing="0" cellpadding="5" style="margin-left: 10px;">
     <?php
     $conn = mysqli_connect('localhost', 'root', '', 'test');
 
