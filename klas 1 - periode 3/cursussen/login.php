@@ -54,6 +54,9 @@ if ($_POST) {
             width: 350px;
             padding: 20px;
         }
+        html {
+            font-size: 15px;
+        }
     </style>
 </head>
 <header id="header">
@@ -74,7 +77,7 @@ if ($_POST) {
 
 <body>
     <div class="wrapper" style= "margin-top: 50px; margin-left: 550px;">
-        <h2 style= "margin-left: 40%;">Login</h2>
+        <h2 style= "margin-left: 38%;">Login</h2>
         <p style= "font-size: 15px; margin-left: 10%;">Vul hier uw gegevens in om in te loggen.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">

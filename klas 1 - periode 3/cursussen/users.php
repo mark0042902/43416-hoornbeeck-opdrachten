@@ -26,34 +26,35 @@
     <h1 style="margin-left: 75px;">Overzicht gebruikers</h1>
     <h2 style="margin-left: 125px;">Gebruikers:</h2>
     <table border="1" cellspacing="0" cellpadding="5" style="margin-left: 10px;">
-    <?php
-    $conn = mysqli_connect('localhost', 'root', '', 'test');
+        <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'test');
 
-    if ($_POST) {
+        if ($_POST) {
 
-        $sql = "INSERT INTO users SET
+            $sql = "INSERT INTO users SET
             username = '" . $_POST['username'] . "',
             password = '" . $_POST['password'] . "'";
-        mysqli_query($conn, $sql);
-    }
-    echo "<p></p>";
+            mysqli_query($conn, $sql);
+        }
+        echo "<p></p>";
 
-    $sql = "SELECT * FROM users";
-    $result = mysqli_query($conn, $sql);
+        $sql = "SELECT * FROM users";
+        $result = mysqli_query($conn, $sql);
 
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "
         <tr>
-            <td>".$row['id']."</td>
-            <td>".$row['username']."</td>
-            <td>".$row['password']."</td>
+            <td>" . $row['id'] . "</td>
+            <td>" . $row['username'] . "</td>
+            <td>" . $row['password'] . "</td>
             <td><a href= 'user_edit.php?id=" . $row['id'] . "'>Bewerken</a></td>
-            <td><a href= 'user_delete.php?id=" . $row['id'] . "'>Verwijderen</a><br>"."</td>
+            <td><a href= 'user_delete.php?id=" . $row['id'] . "'>Verwijderen</a><br>" . "</td>
         </tr>";
-    }
-    ?>
+        }
+        ?>
 
     </table>
 
 </body>
+
 </html>

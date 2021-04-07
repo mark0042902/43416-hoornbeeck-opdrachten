@@ -41,6 +41,7 @@ include "header.inc.php";
                 echo "
                 <td>Inschrijven</td>
                 <td>Bewerken</td>
+                <td>Toevoegen</td>
                 <td>Verwijderen</td>
             </tr>";
             }
@@ -74,6 +75,7 @@ include "header.inc.php";
                 echo "
                 <td><a href='?course=" . $row['cursus'] . "'><button>Inschrijven</button></a></td>
                 <td><a href= 'cursus_edit.php?id=" . $row['id'] . "'><button>Bewerken</button></a></td>
+                <td><a href= 'cursus_add.php?id=". $row['id'] ."'><button>Toevoegen</button></a></td>
                 <td><a href= 'cursus_delete.php?id=" . $row['id'] . "'><button>Verwijderen</button></a><br>" . "</td>
             </tr>";
             }
@@ -82,7 +84,7 @@ include "header.inc.php";
 
         echo "</table>
         </form>";
-        
+            
         if (isset($_GET['course'])) {
             echo "Beste " . $_SESSION["username"] . " u heeft zich ingeschreven voor " . $_GET['course'] . "";
         }

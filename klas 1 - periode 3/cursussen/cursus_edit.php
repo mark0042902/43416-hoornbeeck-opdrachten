@@ -17,6 +17,7 @@
         <span class="line"></span>
     </nav>
 </header>
+
 <body style="margin-left: 650px;">
 
     <h2 style="margin-top: 100px; margin-left: 10px;">Cursussen bewerken</h2>
@@ -37,11 +38,12 @@
         $sql = "UPDATE cursussen SET
         cursus = '" . $_POST['cursus'] . "',
         omschrijving = '" . $_POST['omschrijving'] . "',
-        prijs = '" . $_POST['prijs'] . "',
-        WHERE id = " . $_POST['id'];
+        prijs = '" . $_POST['prijs'] . "'
+        WHERE id = '" . $_POST['id'] ."'";
+
         mysqli_query($conn, $sql);
 
-        header('location: index.php');
+       header('location: index.php');
     }
 
 
