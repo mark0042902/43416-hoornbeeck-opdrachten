@@ -1,0 +1,63 @@
+.login{
+    margin-left: 600px;
+    margin-top: 200px;
+    width: 500px;
+    height: 500px;
+    border-style: solid;
+    border-color: #0A9714;
+    border-radius: 8px;
+    font-size: 35px;
+    text-align: center;
+    background-color: white;
+}
+.txt{
+    font-size: 50px;
+    margin-top: 25px;
+    color: #0A9714;
+}
+.txt2{
+    font-size: 30px;
+    color: #0A9714;
+}
+.loginplekken{
+    margin-top: 25px;
+}
+.typvak{
+    font-size: 30px;
+    width: 350px;
+    height: 45px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #0A9714;
+    background-color: #0a97136d;
+}
+.Loginbutton{
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #0A9714;
+    background-color: #0a97136d;
+}
+.button{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #0A9714;
+    background-color: #0a97136d;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+body{
+    background-image: url(kruidenierslogo.png);
+    background-position-x: center;
+    background-repeat: no-repeat;   
+    background-size: 90%;
+    background-position-x: center;
+    background-position-y: -75px;
+}    
