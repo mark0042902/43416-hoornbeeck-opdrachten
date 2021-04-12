@@ -50,11 +50,6 @@
                 <input type="password" name="password" class="form-control">
                 <span class="help-block"></span>
             </div>
-            <!-- <div class="form-group">
-                <label>Bevestig wachtwoord</label>
-                <input type="password" name="confirm_password" class="form-control">
-                <span class="help-block"></span>
-            </div> -->
             <div class="form-group" style="margin-left: 85px;">
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-default" value="Reset">

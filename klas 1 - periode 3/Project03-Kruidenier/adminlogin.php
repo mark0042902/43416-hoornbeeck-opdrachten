@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 // if (isset($_SESSION["login"])) {
-//     header("location: kassa.php");
+//     header("location: Adminpage.php");
 //     exit;
 // }
 
@@ -23,7 +23,7 @@ if ($_POST) {
 
 
         // Prepare a select statement
-        $sql = "SELECT * FROM gebruikers WHERE username = '$username' and password = '$password'";
+        $sql = "SELECT * FROM admin WHERE username = '$username' and password = '$password'";
         $result = mysqli_query($link, $sql);
 
         if (mysqli_num_rows($result) == 1) {
@@ -32,7 +32,7 @@ if ($_POST) {
             $_SESSION["login"] = true;
             $_SESSION["username"] = $username;
 
-            header("location: kassa.php");
+            header("location: Adminpage.php");
         } else {
             // Display an error message if password is not valid
             $error = "Het wachtwoord dat u heeft ingevuld in niet correct.";
@@ -48,12 +48,12 @@ if ($_POST) {
 
     <link rel="STYLESHEET" href="logincss.css" type="text/css">
 
-    <title>Login - De Kruidenier</title>
+    <title>Admin login - De Kruidenier</title>
 </head>
 
 <body>
     <div class="login">
-        <div class="txt">Login</div>
+        <div class="txt">Admin login</div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="loginplekken">
                 <label>
@@ -70,7 +70,7 @@ if ($_POST) {
             <div class="loginplekken">
                 <input type="submit" class="Loginbutton" value="Login">
             </div>
-            <p style="font-size: 15px;">Bent u admin? Log dan <a href="adminlogin.php">hier</a> in.</p>
+            <p style="font-size: 15px;">Bent u een gebruiker? Log dan <a href="Login.php">hier</a> in.</p>
         </form>
     </div>
     </div>
