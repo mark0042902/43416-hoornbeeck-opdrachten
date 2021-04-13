@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 
 <head>
     <title>Admins toevoegen - De kruidenier</title>
@@ -8,28 +8,21 @@
 
 <body>
     <div class="login">
-        <h1 class="txt">Admins Aanmaken</h1>
+        <h1 class="txt">Admins aanmaken</h1>
         <h2 class="txt2" style="margin-top: -25px;">Vul dit formulier in om een admin aan te maken.</h2>
-        <form>
-            <div>
-                <label>
+            <form method="post">
+                <div>
                     <div class="txt2">Gebruikersnaam</div>
-                </label>
-                <input type="text" name="username" class="typvak">
-                <span class="help-block"></span>
-            </div>
-            <div class="form-group">
-                <label>
+                    <input type="text" name="username" class="typvak">
+                <div>
                     <div class="txt2">Wachtwoord</div>
-                </label>
-                <input type="password" name="password" class="typvak">
-                <span class="help-block"></span>
-            </div>
-            <div style="margin-top: 15px;">
-                <input type="submit" class="button" value="Submit">
-                <input type="reset" class="button" value="Reset">
-            </div>
-        </form>
+                    <input type="password" name="password" class="typvak">
+                </div>
+                <div style="margin-top: 15px;">
+                    <input type="submit" class="button" value="Submit">
+                    <input type="reset" class="button" value="Reset">
+                </div>
+            </form>
     </div>
 
 </body>
@@ -41,8 +34,8 @@ if ($_POST) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-
     $sql = "INSERT INTO admin(username,password) VALUES('$username','$password')";
+    $result = mysqli_query($link, $sql);
 
     if (isset($result)) {
         header("location: users.php");
