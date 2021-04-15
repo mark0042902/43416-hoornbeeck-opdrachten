@@ -52,7 +52,7 @@ if ($_POST) {
 </head>
 
 <body>
-    <div class="login" style="margin-right: -25%;">
+    <div class="login" style="margin-left: 35%;">
         <div class="txt">Admin login</div>
         <form action="" method="post">
             <div class="loginplekken">

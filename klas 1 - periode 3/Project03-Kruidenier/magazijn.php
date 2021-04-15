@@ -36,7 +36,7 @@
             ?>
    
     </div>    
-    <div class="producten" style="margin-left: 10%;">
+    <div class="producten" style="margin-left: 3%;">
 
             <table border="1" cellspacing="0" cellpadding="5">
                         <tr>
@@ -49,6 +49,7 @@
                             <td>Aantal</td>
                             <td>Toevoegen</td>
                             <td>Bewerken</td>
+                            <td>Verwijderen</td>
                             <?php
                             if (isset($_POST['search'])) {
                                 if (mysqli_num_rows($result) > 0) {
@@ -63,6 +64,7 @@
                                             <td>" . $row['Aantal'] . "</td>
                                             <td><a style='text-decoration: none; color: black;'href=\"magazijn.php?kopen=". $row['Artikelnummer'] ."\"><button>Toevoegen</a></td>
                                             <td><a style='text-decoration: none; color: black;'href='edit_product.php?id=" . $row['id'] . "'><button>Bewerken</a></td>
+                                            <td><a style='text-decoration: none; color: black;' href= 'producten_delete.php?id=" . $row['id'] . "'><button>Verwijderen</a><br>" . "</td>
                                         </tr>";
                                     }
                                     

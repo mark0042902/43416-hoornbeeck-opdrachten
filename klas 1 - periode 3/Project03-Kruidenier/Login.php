@@ -54,7 +54,7 @@ if ($_POST) {
 <body>
     <div class="login" style="margin-left: 35%;">
         <div class="txt">Login</div>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form action="" method="post">
             <div class="loginplekken">
                 <label>
                     <p>Gebruikersnaam</p>

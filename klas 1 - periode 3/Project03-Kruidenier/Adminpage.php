@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="login" style="margin-left: 35%; height: 450px;">
+    <div class="login" style="margin-left: 35%; margin-top: 10%; height: 450px;">
         <div class="txt">Welkom Admin,</div>
         <div class="txt2">Klik hieronder op het gebied waar u graag heen wilt:</div><br>
         <a href="kassa.php" class="button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kassa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br>
