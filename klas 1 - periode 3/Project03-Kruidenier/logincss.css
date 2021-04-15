@@ -1,6 +1,5 @@
 .login {
-  margin-left: 600px;
-  margin-top: 200px;
+  margin: auto auto;
   width: 500px;
   height: 500px;
   border-style: solid;
@@ -57,7 +56,7 @@ body {
   background-image: url(kruidenierslogo.png);
   background-position-x: center;
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 80%;
   background-position-x: center;
-  background-position-y: -75px;
+  background-position-y: -100px;
 }

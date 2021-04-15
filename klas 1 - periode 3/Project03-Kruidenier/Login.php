@@ -3,10 +3,10 @@
 session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
-// if (isset($_SESSION["login"])) {
-//     header("location: kassa.php");
-//     exit;
-// }
+if (isset($_SESSION["login"])) {
+    header("location: kassa.php");
+    exit;
+}
 
 // Include config file
 include("config.php");
@@ -52,7 +52,7 @@ if ($_POST) {
 </head>
 
 <body>
-    <div class="login">
+    <div class="login" style="margin-left: 35%;">
         <div class="txt">Login</div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="loginplekken">

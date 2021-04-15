@@ -3,10 +3,10 @@
 session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
-// if (isset($_SESSION["login"])) {
-//     header("location: Adminpage.php");
-//     exit;
-// }
+if (isset($_SESSION["login"])) {
+    header("location: Adminpage.php");
+    exit;
+}
 
 // Include config file
 include("config.php");
@@ -52,9 +52,9 @@ if ($_POST) {
 </head>
 
 <body>
-    <div class="login">
+    <div class="login" style="margin-right: -25%;">
         <div class="txt">Admin login</div>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form action="" method="post">
             <div class="loginplekken">
                 <label>
                     <p>Gebruikersnaam</p>
