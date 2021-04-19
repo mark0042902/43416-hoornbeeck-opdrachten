@@ -24,15 +24,15 @@
 
         $sql = "UPDATE producten SET
         Artikelnummer = '" . $_POST['Artikelnummer'] . "',
-        Omschrijvingving = '" . $_POST['Omschrijving'] . "',
+        Omschrijving = '" . $_POST['Omschrijving'] . "',
         Leverancier = '" . $_POST['Leverancier'] . "',
         Categorie = '" . $_POST['Categorie'] . "',
         Eenheid = '" . $_POST['Eenheid'] . "',
         Prijs = '" . $_POST['Prijs'] . "',
         Aantal = '" . $_POST['Aantal'] . "'
-        WHERE id = " . $_POST['id'];
+        WHERE id = " . $_GET['id'];
         mysqli_query($link, $sql);
-
+        
         header('location: magazijn.php');
     }
 

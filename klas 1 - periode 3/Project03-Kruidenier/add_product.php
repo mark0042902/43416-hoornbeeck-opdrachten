@@ -2,14 +2,14 @@
 <html >
 
 <head>
-    <title>Admins toevoegen - De kruidenier</title>
+    <title>Producten toevoegen - De kruidenier</title>
     <link rel="stylesheet" href="logincss.css" type="text/css">
 </head>
 
 <body>
     <div class="login" style="margin-top: -25px; height: max-content;">
-        <h1 class="txt">Admins aanmaken</h1>
-        <h2 class="txt2" style="margin-top: -25px;">Vul dit formulier in om een admin aan te maken.</h2>
+        <h1 class="txt">Producten toevoegen</h1>
+        <h2 class="txt2" style="margin-top: -25px;">Vul dit formulier in om een product toe te voegen.</h2>
             <form method="post">
                 <div>
                     <div class="txt2">Artikelnummer</div>
