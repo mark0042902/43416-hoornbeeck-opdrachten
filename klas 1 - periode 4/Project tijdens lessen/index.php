@@ -1,37 +1,35 @@
-<html>
+<?php
+include "header/header_home.php";
+include "include/config.php";
+?>
 
-<head>
 
-    <link rel="STYLESHEET" href="index.css" type="text/css">
-    <title>Homepage</title>
-</head>
+<div id="start">
+    <h1 class="title">Goedendag, <br> klik op filteren om uw zoekresultaten te filteren</h1>
+    <h3 class="kopje">Vul hieronder de velden in om uw zoekresultaten te specificeren</h3>
+</div>
 
-<body>
+< <form action="kassa.php" method="POST">
+    <input type="search" placeholder="Land van bestemming..." class="filter">
 
-    <div class="sidebar">
-        <img class="logo" src="logo_vakantie.com.png"><br>
-        <a class="active" href="index.php">Home</a>
-        <a href="">Alle huisjes</a>
-        <a href="">Account</a>
-
-    </div>
-
-    <div id="start">
-        <h1 class="title">Goedendag, <br> klik op filteren om uw zoekresultaten te filteren</h1>
-    </div>
-    <button class="filter">
-        <label>Filteren</label>
-    </button>
-    <hr>
+    <input type="search" placeholder="Aantal personen" class="filter">
+    </form>
+    <hr class="head">
 
     <div class="houses">
-        <ul class="pic">photo</ul>
-        <ul class="title">house</ul>
-        <ul class="desc">nice</ul>
-        <ul class="price">50</ul>
+        <table class="table" cellspacing="0" cellpadding="5">
+            <tr>
+                <td>
+                    <ul class="photo"><?   ?></ul>
+                    <ul class="title_p">title</ul>
+                    <ul class="desc">description</ul>
+                    <ul class="price">price</ul>
+                </td>
+            </tr>
+        </table>
     </div>
 
 
-</body>
-
-</html>
+    <?php
+    include "end/footer.php";
+    ?>

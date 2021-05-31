@@ -60,19 +60,17 @@
                                 <td>" . $row['Eenheid'] . "</td>
                                 <td>" . $row['Prijs'] . "</td>
                                 <td>" . $row['Aantal'] . "</td>
-                                <td><a href=\"kassa.php?kopen=". $row['Artikelnummer'] ."\"><button>Kopen</a></td>
+                                <td><a href=\"kassa.php?kopen=" . $row['Artikelnummer'] . "\"><button>Kopen</a></td>
                             </tr>";
                         }
-                        
                     } else {
                         echo "er zijn geen resultaten gevonden";
                     }
                 }
-                if(isset($_GET["kopen"])){
+                if (isset($_GET["kopen"])) {
 
                     $sql = "UPDATE producten SET Aantal = Aantal - 1 WHERE Artikelnummer = $_GET[kopen]";
                     $result = mysqli_query($link, $sql);
-                    
                 }
                 ?>
 

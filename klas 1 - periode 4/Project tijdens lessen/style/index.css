@@ -1,0 +1,145 @@
+/* Mobile */
+@media screen and (max-width: 1000px) {
+  #start {
+    margin-left: 167.5px;
+    width: max-content;
+    height: max-content;
+  }
+  #start .title {
+    text-align: center;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #0303cb;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .filter {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 175px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #0303cb;
+    width: 637.5px;
+  }
+  .head {
+    margin: 20 50 0 50;
+    color: black;
+  }
+  div.houses {
+    margin-left: 100px;
+  }
+  .table {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 125px;
+  }
+  .photo {
+    margin-top: 15px;
+    border: 1px solid blue;
+    height: 125px;
+    width: 150px;
+  }
+  .title_p {
+    padding: 20px 40px;
+    margin-top: -165px;
+    margin-left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .desc {
+    margin-left: 220px;
+    margin-top: -40px;
+    border: 1px solid black;
+    width: 350px;
+    height: 82px;
+    font-size: 20px;
+  }
+  .price {
+    margin-top: -50px;
+    margin-left: 655px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
+/* Web */
+@media screen and (min-width: 1000px) {
+  #start {
+    margin-top: 5px;
+    margin-left: 450px;
+    width: max-content;
+    height: max-content;
+  }
+  #start .title {
+    text-align: center;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #0303cb;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 10px;
+    padding: 20px 40px;
+  }
+  #start .kopje {
+    text-align: center;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #0303cb;
+    height: fit-content;
+    width: fit-content;
+  }
+  .filter {
+    width: 725px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 425px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #0303cb;
+  }
+
+  .head {
+    margin: 25 50 0 250;
+  }
+
+  div.houses {
+    margin-left: 450px;
+  }
+  .table {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 125px;
+  }
+  .photo {
+    margin-top: 15px;
+    border: 1px solid blue;
+    height: 125px;
+    width: 150px;
+  }
+  .title_p {
+    padding: 20px 40px;
+    margin-top: -165px;
+    margin-left: 180px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .desc {
+    margin-left: 220px;
+    margin-top: -30px;
+    border: 1px solid black;
+    width: 350px;
+    height: 82px;
+  }
+  .price {
+    margin-top: -50px;
+    margin-left: 655px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
