@@ -12,6 +12,10 @@
     <div class="sidebar">
         <img class="logo" src="logo_vakantie.com.png"><br>
         <a class="active" href="index.php">Home</a>
-        <a href="Login.php">Account</a>
+        <a href="login.php">login</a>
+        <?php
+        if (isset($_SESSION["loggedin"])) {
+        }
+        ?>
 
     </div>

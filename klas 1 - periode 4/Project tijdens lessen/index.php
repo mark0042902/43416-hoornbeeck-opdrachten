@@ -9,8 +9,8 @@ include "include/config.php";
     <h3 class="kopje">Vul hieronder de velden in om uw zoekresultaten te specificeren</h3>
 </div>
 
-< <form action="kassa.php" method="POST">
-    <input type="search" placeholder="Land van bestemming..." class="filter">
+< <form action="index.php" method="POST">
+    <input type="search" placeholder="Land van bestemming" class="filter">
 
     <input type="search" placeholder="Aantal personen" class="filter">
     </form>

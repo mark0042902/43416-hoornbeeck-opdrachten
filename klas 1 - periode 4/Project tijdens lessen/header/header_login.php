@@ -12,6 +12,6 @@
     <div class="sidebar">
         <img class="logo" src="logo_vakantie.com.png"><br>
         <a href="index.php">Home</a>
-        <a class="active" href="Login.php">Account</a>
+        <a class="active" href="login.php">login</a>
 
     </div>

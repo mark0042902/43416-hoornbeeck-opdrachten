@@ -13,7 +13,15 @@
     height: fit-content;
     width: fit-content;
   }
-
+  #start .kopje {
+    text-align: center;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #0303cb;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+  }
   .filter {
     font-size: 25px;
     font-weight: bold;
@@ -91,13 +99,15 @@
     border-color: #0303cb;
     height: fit-content;
     width: fit-content;
+    padding: 10px 20px;
+    margin-left: 50px;
   }
   .filter {
     width: 725px;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    margin-left: 425px;
+    margin-left: 460px;
     border-radius: 8px;
     border-style: solid;
     border-color: #0303cb;
@@ -141,5 +151,10 @@
     margin-left: 655px;
     font-size: 25px;
     font-weight: bold;
+  }
+  #login {
+    margin-left: 150px;
+  }
+  #login .loginp {
   }
 }
