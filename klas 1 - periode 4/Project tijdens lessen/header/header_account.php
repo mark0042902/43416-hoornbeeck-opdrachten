@@ -1,7 +1,10 @@
 <html>
 
 <head>
-
+    <?php
+    include "include/config.php";
+    include "include/header.inc.php";
+    ?>
     <title>Homepage</title>
 </head>
 
@@ -10,12 +13,14 @@
     <div class="sidebar">
         <img class="logo" src="logo_vakantie.com.png"><br>
         <a href="index.php">Home</a>
-        <a href="login.php">Login</a>
+
 
         <?php
         if (isset($_SESSION["loggedin"])) {
-            '<a class="active" href="account.php">Account</a>';
+            echo '<a href="logout.php">Uitloggen</a>';
+            echo '<a class="active" href="account.php">Account</a>';
+        } else {
+            echo '<a href="login.php">Login</a>';
         }
         ?>
-
     </div>

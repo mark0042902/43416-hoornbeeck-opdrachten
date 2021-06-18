@@ -1,10 +1,11 @@
 <html>
 
 <head>
-
-    <link rel="STYLESHEET" href="style/index.css" type="text/css">
-    <link rel="STYLESHEET" href="style/header.css" type="text/css">
-    <title>Homepage</title>
+    <?php
+    include "include/config.php";
+    include "include/header.inc.php";
+    ?>
+    <title>Loginpage</title>
 </head>
 
 <body>
@@ -12,11 +13,13 @@
     <div class="sidebar">
         <img class="logo" src="logo_vakantie.com.png"><br>
         <a href="index.php">Home</a>
-        <a class="active" href="login.php">Login</a>
 
         <?php
         if (isset($_SESSION["loggedin"])) {
-            '<a href="account.php">Account</a>';
+            echo '<a href="logout.php">Uitloggen</a>';
+            echo '<a href="account.php">Account</a>';
+        } else {
+            echo '<a class="active" href="login.php">Login</a>';
         }
         ?>
 

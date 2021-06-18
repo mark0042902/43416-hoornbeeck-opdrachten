@@ -1,7 +1,5 @@
 <?php
 include "header/header_login.php";
-include "include/config.php";
-include "include/header.inc.php";
 ?>
 
 <div id="start">
@@ -16,41 +14,42 @@ include "include/header.inc.php";
         <p class="txt">Heeft u geen account? <a href="register.php">Maak er hier een</a>.</p>
     </form>
 </div>
+<div class="error">
+    <?php
+    if (isset($_SESSION["loggedin"])) {
+        header("location: account.php");
+        exit;
+    }
 
-<?php
-if (isset($_SESSION["loggedin"])) {
-    header("location: account.php");
-    exit;
-}
+    if ($_POST) {
 
-if ($_POST) {
-
-    // Check if username is empty
-    if (empty($_POST["username"]) || empty($_POST["password"])) {
-        $error = "De gebruikersnaam of het wachtwoord is leeg.";
-    } else {
-        $username = $_POST["username"];
-        $password = hash("sha256", $_POST["password"]);
-
-
-        // Prepare a select statement
-        $sql = "SELECT * FROM users WHERE username = '$username' and password = $password'";
-        $result = mysqli_query($link, $sql);
-
-        if (mysqli_num_rows($result) == 1) {
-
-            // Store data in session variables
-            $_SESSION["loggedin"] = true;
-            $_SESSION["username"] = $username;
-
-            // Redirect user to welcome page
-            header("location: index.php");
+        // Check if username is empty
+        if (empty($_POST["username"]) || empty($_POST["password"])) {
+            echo "De gebruikersnaam of het wachtwoord is leeg.";
         } else {
-            // Display an error message if password is not valid
-            $error = "Het wachtwoord dat u heeft ingevuld in niet correct.";
+            $username = $_POST["username"];
+            $password = hash("sha256", $_POST["password"]);
+
+
+            // Prepare a select statement
+            $sql = "SELECT * FROM users WHERE username = '$username' and password = '$password'";
+            $result = mysqli_query($link, $sql);
+
+            if (mysqli_num_rows($result) == 1) {
+
+                // Store data in session variables
+                $_SESSION["loggedin"] = true;
+                $_SESSION["username"] = $username;
+
+                // Redirect user to welcome page
+                header("location: account.php");
+            } else {
+                // Display an error message if password is not valid
+                echo "Het wachtwoord dat u heeft ingevuld in niet correct.";
+            }
         }
     }
-}
 
-include "end/footer.php";
-?>
+    include "end/footer.php";
+    ?>
+</div>

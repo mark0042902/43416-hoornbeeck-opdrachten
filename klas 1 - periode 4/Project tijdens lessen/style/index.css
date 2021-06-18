@@ -1,6 +1,7 @@
 /* Mobile */
 @media screen and (max-width: 1000px) {
   #start {
+    margin-top: 5px;
     margin-left: 167.5px;
     width: max-content;
     height: max-content;
@@ -12,32 +13,78 @@
     border-color: #0303cb;
     height: fit-content;
     width: fit-content;
+    margin-left: -165px;
+    padding: 20px 40px;
   }
-  #start .kopje {
+  .titler {
     text-align: center;
     border-radius: 15px;
     border-style: solid;
     border-color: #0303cb;
     height: fit-content;
     width: fit-content;
-    padding: 10px 20px;
+    margin-left: 10px;
+    padding: 20px 40px;
+  }
+  .titlel {
+    text-align: center;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #0303cb;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 15px;
+    padding: 20px 40px;
+  }
+  .titlea {
+    text-align: center;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #0303cb;
+    height: fit-content;
+    width: fit-content;
+    margin-left: -60px;
+    padding: 20px 40px;
+  }
+  .form {
+    margin-left: 100px;
+  }
+  .formlogin {
+    margin-left: -300px;
+  }
+  .zoek {
+    margin-top: 15px;
+    margin-left: -350px;
   }
   .filter {
+    width: 725px;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    margin-left: 175px;
+    margin-left: 460px;
+    margin-top: 5px;
     border-radius: 8px;
     border-style: solid;
     border-color: #0303cb;
-    width: 637.5px;
   }
+
+  .buttonsearch {
+    margin-left: 775px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    height: 40px;
+    width: 80px;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
   .head {
-    margin: 20 50 0 50;
-    color: black;
+    margin: 25 50 0 50;
   }
+
   div.houses {
-    margin-left: 100px;
+    margin-left: 450px;
+    margin-top: 15px;
   }
   .table {
     margin-top: 10px;
@@ -55,22 +102,50 @@
     padding: 20px 40px;
     margin-top: -165px;
     margin-left: 180px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
   }
   .desc {
     margin-left: 220px;
-    margin-top: -40px;
+    margin-top: -30px;
     border: 1px solid black;
     width: 350px;
     height: 82px;
-    font-size: 20px;
   }
   .price {
     margin-top: -50px;
     margin-left: 655px;
     font-size: 25px;
     font-weight: bold;
+  }
+  #login {
+    margin-left: 625px;
+  }
+  .loginp {
+    border: 2px solid blue;
+    border-radius: 8px;
+    height: 50px;
+    align-content: center;
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  .button {
+    border: 1px solid blue;
+    border-radius: 8px;
+    height: 40px;
+    width: 80px;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 5px;
+  }
+  .txt {
+    font-size: 25px;
+    margin-top: -0.5px;
+    margin-left: -40px;
+  }
+  .error {
+    margin-left: 275px;
+    font-size: 22.5px;
   }
 }
 
@@ -206,5 +281,8 @@
   }
   .txt {
     margin-top: -0.5px;
+  }
+  .error {
+    margin-left: 700px;
   }
 }
