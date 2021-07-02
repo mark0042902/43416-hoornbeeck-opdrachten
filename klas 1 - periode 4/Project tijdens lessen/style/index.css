@@ -89,7 +89,8 @@
   .table {
     margin-top: 10px;
     border: 1px solid black;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
+    border-radius: 8px;
     height: 125px;
   }
   .photo {
@@ -117,6 +118,9 @@
     margin-left: 655px;
     font-size: 25px;
     font-weight: bold;
+  }
+  .but {
+    margin-left: 150px;
   }
   #login {
     margin-left: 625px;
@@ -230,7 +234,8 @@
   .table {
     margin-top: 10px;
     border: 1px solid black;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
+    border-radius: 9px;
     height: 125px;
   }
   .photo {
@@ -247,9 +252,9 @@
     font-weight: bold;
   }
   .desc {
-    margin-left: 220px;
-    margin-top: -30px;
-    border: 1px solid black;
+    margin-left: 180px;
+    margin-top: -35px;
+    /* border: 1px solid black; */
     width: 350px;
     height: 82px;
   }
@@ -258,6 +263,10 @@
     margin-left: 655px;
     font-size: 25px;
     font-weight: bold;
+  }
+  .but {
+    margin-left: 700;
+    margin-top: -100;
   }
   #login {
     margin-left: 625px;
