@@ -20,7 +20,6 @@ class Tree
         echo $this->branch;
         echo $this->tribe;
         echo $this->roots;
-
     }
 }
 $tree = new Tree("oak", "oak", "oak", "oak");
