@@ -32,7 +32,7 @@ if ($_POST) {
     $result = mysqli_query($link, $sql);
 
     if (isset($result)) {
-        header("location: index.php");
+        header("location: randomTable.php");
     } else {
         echo "Er is wat fout gegaan. Probeer het opnieuw." . mysqli_error($link);
     }

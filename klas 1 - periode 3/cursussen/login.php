@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if (isset($_SESSION["login"])) {
-    header("location: index.php");
+    header("location: randomTable.php");
     exit;
 }
 
@@ -33,7 +33,7 @@ if ($_POST) {
              $_SESSION["username"] = $username;
 
              // Redirect user to welcome page
-             header("location: index.php");
+             header("location: randomTable.php");
          } else {
              // Display an error message if password is not valid
              $error = "Het wachtwoord dat u heeft ingevuld in niet correct.";

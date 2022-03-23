@@ -43,7 +43,7 @@
 
         mysqli_query($conn, $sql);
 
-       header('location: index.php');
+       header('location: randomTable.php');
     }
 
 
